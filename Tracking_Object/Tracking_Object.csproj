@@ -61,6 +61,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="1. Matrix structure\1.1 GUI\GUI.cs" />
+    <Compile Include="1. Matrix structure\Matrix structure.cs" />
+    <Compile Include="10. Blur\Blur.cs" />
+    <Compile Include="11. Morphology operation\Morphology_operation.cs" />
+    <Compile Include="12. Labeling\Labeling.cs" />
+    <Compile Include="13. Contour and corner detection\Contour_Corner.cs" />
+    <Compile Include="14. Bounding rectangle\Bounding_rec.cs" />
+    <Compile Include="15. ConvexHull\ConvexHull.cs" />
+    <Compile Include="16. Template matching\Template_matching.cs" />
+    <Compile Include="2. Camera\Camera.cs" />
+    <Compile Include="3. Edit image\Edit_image.cs" />
+    <Compile Include="4. GrayScale\GrayScale.cs" />
+    <Compile Include="5. Binarization\Binarization.cs" />
+    <Compile Include="6. merge\merge.cs" />
+    <Compile Include="7. Drawing\Drawing.cs" />
+    <Compile Include="8. Geometric transformation\Geometric_trans.cs" />
+    <Compile Include="9. BackgroundSubtractor\BackgroundSubtractor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Static_Class.cs" />
@@ -69,26 +86,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="1. Matrix structure\" />
-    <Folder Include="1. Mat\" />
-    <Folder Include="1.1 GUI\" />
-    <Folder Include="10. Blur\" />
-    <Folder Include="11. Morphology operation\" />
-    <Folder Include="12. Labeling\" />
-    <Folder Include="13. Contour and corner detection\" />
-    <Folder Include="14. Bounding rectangle\" />
-    <Folder Include="15. ConvexHull\" />
-    <Folder Include="16. Template matching\" />
-    <Folder Include="2. Camera\" />
-    <Folder Include="3. Edit image\" />
-    <Folder Include="4. GrayScale\" />
-    <Folder Include="5. Binarization\" />
-    <Folder Include="6. merge\" />
-    <Folder Include="7. Drawing\" />
-    <Folder Include="8. Geometric transformation\" />
-    <Folder Include="9. BackgroundSubtractor\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
