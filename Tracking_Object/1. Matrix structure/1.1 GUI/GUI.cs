@@ -10,6 +10,7 @@ namespace Tracking_Object._1._Matrix_structure._1._1_GUI
 {
     public class GUI
     {
+
         public void Windows_Example()
         {
             Mat WindowImage = new Mat("./Resource.jpg", ImreadModes.AnyColor);
@@ -19,9 +20,9 @@ namespace Tracking_Object._1._Matrix_structure._1._1_GUI
         public void MouseCallBack_Example()
         {
             Mat WindowImage = new Mat("./Resource.jpg", ImreadModes.AnyColor);
-            Window foo = new Window("OpenCVWindow", WindowImage); // class OpenCvSharp.CPlusPlus.Window
-
+            Window foo = new Window("OpenCVWindow", WindowMode.AutoSize,WindowImage); // class OpenCvSharp.CPlusPlus.Window
         }
+
         public void TrackBar_Example()
         {
             using (var src = new Mat(@"./Resource.jpg", ImreadModes.AnyDepth | ImreadModes.AnyColor))
