@@ -5,7 +5,7 @@ using System.Text;
 using OpenCvSharp;
 using System.Threading.Tasks;
 
-namespace Tracking_Object._1.Matrix_structure
+namespace Tracking_Object
 {
     class Matrix_structure
     {

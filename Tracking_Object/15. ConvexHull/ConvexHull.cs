@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tracking_Object._15._ConvexHull
+namespace Tracking_Object
 {
     class ConvexHull
     {

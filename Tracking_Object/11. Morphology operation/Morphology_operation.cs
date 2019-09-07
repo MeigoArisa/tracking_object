@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tracking_Object._11._Morphology_operation
+namespace Tracking_Object
 {
     class Morphology_operation
     {

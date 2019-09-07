@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tracking_Object._16._Template_matching
+namespace Tracking_Object
 {
     class Template_matching
     {

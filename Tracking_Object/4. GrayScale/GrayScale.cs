@@ -3,10 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OpenCvSharp;
 
-namespace Tracking_Object._4._GrayScale
+namespace Tracking_Object
 {
     class GrayScale
     {
+        public Mat GrayScale_meth()
+        {
+            Mat OriginalImage = new Mat();
+            Mat GrayImage = new Mat();
+            Cv2.CvtColor(OriginalImage, GrayImage, ColorConversionCodes.RGB2GRAY);
+            return GrayImage;
+        }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tracking_Object._12._Labeling
+namespace Tracking_Object
 {
     class Labeling
     {

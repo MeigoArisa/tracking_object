@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tracking_Object._13._Contour_and_corner_detection
+namespace Tracking_Object
 {
     class Contour_Corner
     {

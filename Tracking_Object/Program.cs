@@ -11,9 +11,8 @@ namespace Tracking_Object
     {
         static void Main(string[] args)
         {
-            _1._Matrix_structure._1._1_GUI.GUI a = new _1._Matrix_structure._1._1_GUI.GUI();
-            a.MouseCallBack_Example();
-            Console.WriteLine();
+            GUI gUI = new GUI();
+            gUI.TrackBar_Example();
         }
     }
 }

@@ -3,7 +3,7 @@ using System;
 using System.Diagnostics;
 using System.Threading;
 
-namespace Tracking_Object._2._Camera
+namespace Tracking_Object
 {
     class Camera :IDisposable
     {
