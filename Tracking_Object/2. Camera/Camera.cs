@@ -5,7 +5,7 @@ using System.Threading;
 
 namespace Tracking_Object
 {
-    class Camera :IDisposable
+    class Camera : IDisposable
     {
         VideoCapture capture;
         private Thread camera;
@@ -19,18 +19,16 @@ namespace Tracking_Object
 
         private void CaptureCameraCallback()
         {
-            using (var capture = new VideoCapture(CaptureDevice.Any, index: 0))
-            {
-                using Mat frame = new Mat();
-                while (isCameraRunning == true)
-                {
-                    var interval = (int)(1000 / capture.Fps);
-                    capture.Read(frame);
-                    Cv2.ImShow("Cam", frame);
-                    Debug.WriteLine(interval);
-                }
-            }
+            using var capture = new VideoCapture(CaptureDevice.Any, index: 0);
 
+            using Mat frame = new Mat();
+            while (isCameraRunning == true)
+            {
+                var interval = (int)(1000 / capture.Fps);
+                capture.Read(frame);
+                Cv2.ImShow("Cam", frame);
+                Debug.WriteLine(interval);
+            }
         }
         private void Camera_Start()
         {

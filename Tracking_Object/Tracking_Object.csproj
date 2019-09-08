@@ -96,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="opencv.png" />
+    <Content Include="TextSample.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

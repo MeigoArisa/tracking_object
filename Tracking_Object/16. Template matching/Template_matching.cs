@@ -8,5 +8,9 @@ namespace Tracking_Object
 {
     class Template_matching
     {
+        public void Template_matching_example()
+        {
+
+        }
     }
 }

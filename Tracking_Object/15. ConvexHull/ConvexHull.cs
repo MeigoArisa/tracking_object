@@ -8,5 +8,9 @@ namespace Tracking_Object
 {
     class ConvexHull
     {
+        public void ConvexHull_Example()
+        {
+
+        }
     }
 }

@@ -76,8 +76,8 @@ namespace Tracking_Object
                     }
 
                     Cv2.PutText(dst, (n < 0) ?
-                        string.Format("Open/Erosion followed by Dilation[{0}]", elementShape)
-                        : string.Format("Close/Dilation followed by Erosion[{0}]", elementShape),
+                        string.Format("Open/Erosion [{0}]", elementShape)
+                        : string.Format("Close/Dilation [{0}]", elementShape),
                         new Point(10, 15), HersheyFonts.HersheyPlain, 1, Scalar.Black);
                     openCloseWindow.Image = dst;
                 });

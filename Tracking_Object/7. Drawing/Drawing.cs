@@ -11,7 +11,7 @@ namespace Tracking_Object
     {
         public void Drawing_method()
         {
-            Mat OriginalImage = new Mat("../../opencv.png", ImreadModes.AnyColor);
+            using Mat OriginalImage = new Mat("../../opencv.png", ImreadModes.AnyColor);
 
             Cv2.Line(OriginalImage, new Point(10,10),new Point(630,10), Scalar.Blue);
             Cv2.Circle(OriginalImage,new Point(100,100),40, Scalar.Blue);

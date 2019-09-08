@@ -11,8 +11,8 @@ namespace Tracking_Object
     {
         static void Main(string[] args)
         {
-            GUI gUI = new GUI();
-            gUI.TrackBar_Example();
+            Contour_Corner Contour = new Contour_Corner();
+            Contour.Corner_example();
         }
     }
 }

@@ -9,11 +9,13 @@ namespace Tracking_Object
 {
     class Geometric_trans
     {
+        List<Point2f> point2Fs = new List<Point2f>();
+
         Point2f[] srcPoints = new Point2f[] {
-            new Point2f(69, 110),
-            new Point2f(81, 857),
-            new Point2f(1042, 786),
-            new Point2f(1038, 147),
+            new Point2f(0, 0),
+            new Point2f(0, 0),
+            new Point2f(0, 0),
+            new Point2f(0, 0),
         };
 
         Point2f[] dstPoints = new Point2f[] {
@@ -22,52 +24,36 @@ namespace Tracking_Object
             new Point2f(640, 480),
             new Point2f(640, 0),
         };
+
+        Mat OriginalImage;
         public void Geometric()
         {
-            //var srcPoints = new Point2f[] {
-            //    new Point2f(69, 110),
-            //    new Point2f(81, 857),
-            //    new Point2f(1042, 786),
-            //    new Point2f(1038, 147),
-            //};
-            //
-            //var dstPoints = new Point2f[] {
-            //    new Point2f(0, 0),
-            //    new Point2f(0, 480),
-            //    new Point2f(640, 480),
-            //    new Point2f(640, 0),
-            //};
+            OriginalImage = new Mat("./Resource.jpg", ImreadModes.AnyColor);
+            using var Window = new Window("result", OriginalImage);
 
-            using var matrix = Cv2.GetPerspectiveTransform(srcPoints, dstPoints);
-            using var OriginalImage = new Mat("./Resource.jpg", ImreadModes.AnyColor);
-            using var dst = new Mat(new Size(640, 480), MatType.CV_8UC3);
-            Cv2.WarpPerspective(OriginalImage, dst, matrix, dst.Size());
-            using var Window = new Window("result", dst);
-            Cv2.WaitKey();
-            
-        }
-
-        public void MouseCallBack()
-        {
-            using Mat WindowImage = new Mat("./Resource.jpg", ImreadModes.AnyColor);
-            using Window foo = new Window("OpenCVWindow", WindowMode.AutoSize, WindowImage);
-            Cv2.SetMouseCallback(foo.Name, CallbackOpenCVAnnotate);
-            Cv2.WaitKey();
+            Cv2.SetMouseCallback(Window.Name, CallbackOpenCVAnnotate);
+            Window.WaitKey();
         }
         private void CallbackOpenCVAnnotate(MouseEvent e, int x, int y, MouseEvent flags, IntPtr userdata)
         {
             if (e == MouseEvent.LButtonDown)
             {
-                
-            }
-            else if (flags == MouseEvent.FlagLButton)
-            {
-            }
-            else if (e == MouseEvent.LButtonUp)
-            {
-            }
-            else if (e == MouseEvent.MouseWheel)
-            {
+                point2Fs.Add(new Point2f(x, y));
+                if(point2Fs.Count == 4)
+                {
+                    srcPoints = new Point2f[]
+                    {
+                        point2Fs[0],
+                        point2Fs[1],
+                        point2Fs[2],
+                        point2Fs[3]
+                    };
+                    using var matrix = Cv2.GetPerspectiveTransform(srcPoints, dstPoints);
+                    using var dst = new Mat(new Size(640, 480), MatType.CV_8UC3);
+                    Cv2.WarpPerspective(OriginalImage, dst, matrix, dst.Size());
+                    using var dsts = new Window("dst", dst);
+                    point2Fs.Clear();
+                }
             }
         }
     }

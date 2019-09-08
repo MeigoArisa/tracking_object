@@ -11,8 +11,8 @@ namespace Tracking_Object
     {
         public Mat GrayScale_meth()
         {
-            Mat OriginalImage = new Mat();
-            Mat GrayImage = new Mat();
+            using Mat OriginalImage = new Mat();
+            using Mat GrayImage = new Mat();
             Cv2.CvtColor(OriginalImage, GrayImage, ColorConversionCodes.RGB2GRAY);
             return GrayImage;
         }

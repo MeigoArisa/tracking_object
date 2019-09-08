@@ -11,9 +11,9 @@ namespace Tracking_Object
     {
         public Mat Binarization_method()
         {
-            Mat OriginalImage = new Mat("../../opencv.png",ImreadModes.AnyColor);
-            Mat GrayImage = new Mat();
-            Mat thresimg = new Mat();
+            using Mat OriginalImage = new Mat("../../opencv.png",ImreadModes.AnyColor);
+            using Mat GrayImage = new Mat();
+            using Mat thresimg = new Mat();
             Cv2.CvtColor(OriginalImage, GrayImage, ColorConversionCodes.RGB2GRAY);
             Cv2.Threshold(GrayImage, thresimg, 100, 255, ThresholdTypes.Binary);
             Cv2.ImShow("thresimg", thresimg);

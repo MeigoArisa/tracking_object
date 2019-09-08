@@ -8,5 +8,9 @@ namespace Tracking_Object
 {
     class Bounding_rec
     {
+        public void BoundingRect_Example()
+        {
+
+        }
     }
 }
