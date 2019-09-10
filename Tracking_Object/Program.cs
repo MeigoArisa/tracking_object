@@ -11,8 +11,8 @@ namespace Tracking_Object
     {
         static void Main(string[] args)
         {
-            Contour_Corner Contour = new Contour_Corner();
-            Contour.Corner_example();
+            Template_matching template = new Template_matching();
+            template.Template_matching_example();
         }
     }
 }

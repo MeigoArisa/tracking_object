@@ -95,7 +95,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CutResource.png" />
     <Content Include="opencv.png" />
+    <Content Include="Resource.png" />
     <Content Include="TextSample.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

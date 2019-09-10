@@ -71,8 +71,10 @@ namespace Tracking_Object
 
             int cornerCount = 150;
             Point2f[] corners = Cv2.GoodFeaturesToTrack(threshImage, cornerCount, 0.01, 5, null, 3, true, 0.01);
+
             using var dst = new Mat();
             Cv2.CvtColor(threshImage, dst, ColorConversionCodes.GRAY2BGR);
+
             for (int i = 0; i < cornerCount; i++)
             {
                 Cv2.Circle(dst, new Point(corners[i].X, corners[i].Y), 3, Scalar.Red, 2);
