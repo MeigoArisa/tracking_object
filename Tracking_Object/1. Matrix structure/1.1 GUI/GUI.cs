@@ -13,13 +13,13 @@ namespace Tracking_Object
 
         public void Windows_Example()
         {
-            Mat WindowImage = new Mat("./Resource.jpg", ImreadModes.AnyColor);
+            Mat WindowImage = new Mat("./Resource.png", ImreadModes.AnyColor);
             var openCloseWindow = new Window("OpenCVWindow", WindowMode.AutoSize, WindowImage);
             Debug.WriteLine(Cv2.WaitKey());
         }
         public void MouseCallBack_Example()
         {
-            using Mat WindowImage = new Mat("./Resource.jpg", ImreadModes.AnyColor);
+            using Mat WindowImage = new Mat("./Resource.png", ImreadModes.AnyColor);
             using Window foo = new Window("OpenCVWindow", WindowMode.AutoSize, WindowImage);
             Cv2.SetMouseCallback(foo.Name, CallbackOpenCVAnnotate);
             Cv2.WaitKey();

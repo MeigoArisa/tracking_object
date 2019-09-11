@@ -28,7 +28,7 @@ namespace Tracking_Object
         Mat OriginalImage;
         public void Geometric()
         {
-            OriginalImage = new Mat("./Resource.jpg", ImreadModes.AnyColor);
+            OriginalImage = new Mat("./Resource.png", ImreadModes.AnyColor);
             using var Window = new Window("result", OriginalImage);
 
             Cv2.SetMouseCallback(Window.Name, CallbackOpenCVAnnotate);

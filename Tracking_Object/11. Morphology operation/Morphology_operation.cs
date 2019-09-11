@@ -12,7 +12,7 @@ namespace Tracking_Object
     {
         public void Morphology_example()
         {
-            using var src = new Mat(@"./Resource.jpg", ImreadModes.AnyDepth | ImreadModes.AnyColor);
+            using var src = new Mat(@"./Resource.png", ImreadModes.AnyDepth | ImreadModes.AnyColor);
             using var dst = new Mat();
 
             src.CopyTo(dst);

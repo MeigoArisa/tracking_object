@@ -12,7 +12,7 @@ namespace Tracking_Object
     {
         public void Blur_Example()
         {
-            using Mat WindowImage = new Mat("./Resource.jpg", ImreadModes.AnyColor);
+            using Mat WindowImage = new Mat("./Resource.png", ImreadModes.AnyColor);
             using Mat blurImage = new Mat(WindowImage.Size(), WindowImage.Type());
             Cv2.Blur(WindowImage, blurImage, new Size(5, 5));
             using var openCloseWindow = new Window("OpenCVWindow", WindowMode.AutoSize, WindowImage);
