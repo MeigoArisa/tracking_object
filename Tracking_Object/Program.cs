@@ -11,7 +11,7 @@ namespace Tracking_Object
     {
         static void Main(string[] args)
         {
-            var Command = (args.Length < "") ? "" : args[0];
+            var Command = (args.Length < 1) ? "" : args[0];
             
             switch (Command)
             {
@@ -36,7 +36,7 @@ namespace Tracking_Object
                     break;
                 case "5":
                     Binarization binarization = new Binarization();
-                    binarization.Binarization_example();
+                    binarization.Binarization_exammple();
                     break;
                 case "6":
                     merge merge = new merge();

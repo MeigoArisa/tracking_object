@@ -11,7 +11,7 @@ namespace Tracking_Object
         private Thread camera;
         bool isCameraRunning = false;
 
-        private void CaptureCamera()
+        public void CaptureCamera()
         {
             camera = new Thread(new ThreadStart(CaptureCameraCallback));
             camera.Start();

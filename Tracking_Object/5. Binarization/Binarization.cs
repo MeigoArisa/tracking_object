@@ -9,7 +9,7 @@ namespace Tracking_Object
 {
     class Binarization
     {
-        public Mat Binarization_method()
+        public Mat Binarization_exammple()
         {
             using Mat OriginalImage = new Mat("../../opencv.png",ImreadModes.AnyColor);
             using Mat GrayImage = new Mat();

@@ -9,7 +9,7 @@ namespace Tracking_Object
 {
     class GrayScale
     {
-        public Mat GrayScale_meth()
+        public Mat GrayScale_example()
         {
             using Mat OriginalImage = new Mat();
             using Mat GrayImage = new Mat();
