@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Tracking_Object
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static int Main(string[] args)
         {
             var Command = (args.Length < 1) ? "" : args[0];
-            
+
             switch (Command)
             {
                 case "1":
@@ -88,6 +88,8 @@ namespace Tracking_Object
                     break;
             }
             Console.WriteLine($"종료");
+
+            return 0;
         }
     }
 }
